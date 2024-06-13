@@ -19,7 +19,8 @@
     --bg-css: #e0fdef;
     --bg-javascript:#ebf0ff;
     --bg-acessibidade: #f6e7ff;
-    --bg-mobile: url(./assets/images/pattern-background-mobile-ligth.svg);
+    --bg-mobile: url(./assets/images/pattern-background-mobile-light.svg);
+    --bg-desktop: url(./assets/images/pattern-background-desktop-light.svg);
 }
 
 body {
@@ -89,7 +90,7 @@ main{
 }
 
 .assuntos{
-    border: 1px solid red;
+
 
     display: flex;
     flex-direction: column;
@@ -135,4 +136,45 @@ main{
 
 .botao_acessibilidade div {
     background:var(--bg-acessibidade);
+}
+
+@media(min-width: 1100px) {
+    body{
+        background: var(--bg-desktop) var(--bg--color);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    header{
+        margin-block: 81px;
+    }
+    56px
+    main{
+        display: flex;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    section{
+        width: 100%;
+    }
+    .boas_vindas h1 {
+        font-size: 46px;
+        margin-bottom: 48px;
+    }
+    .boas_vindas p {
+        font-size: 20px;
+    }
+    .assuntos{
+        gap: 24px;
+    }
+    .assuntos button {
+        font-size: 28px;
+        padding: 20px;
+        gap: 32px;
+    }
+    .assuntos button div {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
 }
